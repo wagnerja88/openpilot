@@ -151,9 +151,13 @@ class CAR(Platforms):
     dbc_dict=dbc_dict('ford_lincoln_base_pt', RADAR.STEER_ASSIST_DATA),
     specs=CarSpecs(mass=2200, wheelbase=2.984, steerRatio=17.0),  # TODO: check steer ratio
   )
+   FORD_RANGER_MK2 = FordCANFDPlatformConfig(
+    [FordCarDocs("Ford Ranger 2024", "Adaptive Cruise Control with Lane Centering")],
+    CarSpecs(mass=2000, wheelbase=3.27, steerRatio=17.0),
+  )
 
 
-CANFD_CAR = {CAR.F_150_MK14, CAR.F_150_LIGHTNING_MK1, CAR.MUSTANG_MACH_E_MK1}
+CANFD_CAR = {CAR.F_150_MK14, CAR.F_150_LIGHTNING_MK1, CAR.MUSTANG_MACH_E_MK1, CAR.FORD_RANGER_MK2}
 
 
 DATA_IDENTIFIER_FORD_ASBUILT = 0xDE00
